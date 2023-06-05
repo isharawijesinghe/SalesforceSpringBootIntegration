@@ -9,7 +9,7 @@ public class SalesforceTopicIntegrationRoute extends RouteBuilder {
         @Override
         public void configure() throws Exception {
             from("salesforce:subscribe:/topic/Account")
-                    .log("${body}");
+                    .log("Salesforce topic subscription result received : ${body}");
 
     }
 }
